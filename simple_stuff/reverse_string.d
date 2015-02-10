@@ -6,8 +6,8 @@ void main()
 {
     write("Enter a string to reverse: ");
     string input_string = readln();
-    writeln(cheating_reverse_string(input_string.dup));
-    writeln(reverse_string(input_string.dup));
+    writeln(cheating_reverse_string(input_string));
+    writeln(reverse_string(input_string));
 }
 
 string cheating_reverse_string(string s)
