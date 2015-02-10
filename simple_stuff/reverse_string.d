@@ -15,7 +15,7 @@ string cheating_reverse_string(string s)
     string reversed = "";
     foreach_reverse (int i; s)
         reversed ~= i;
-        return reversed.strip;
+    return reversed.strip;
 }
 
 string reverse_string(string s)
