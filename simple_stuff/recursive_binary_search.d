@@ -9,7 +9,7 @@ bool binarySearch(T)(T[] input, T value) {
 	if (input.empty) return false;
 	auto i = input.length / 2;
 	auto mid = input[i];
-	if (mid > value) return binarySearch(input[0 .. i]);
-	if (mid < value) return binarySearch(input[i + 1 .. $]);
+	if (mid > value) return binarySearch(input[0 .. i], value);
+	if (mid < value) return binarySearch(input[i + 1 .. $], value);
 	return true;
 }
