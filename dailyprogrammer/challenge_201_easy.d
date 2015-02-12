@@ -53,7 +53,7 @@ int countDays(int[] currentDate, int[] inputDate)
     }
 
     for(int i = 1; i < currentDate[1]; i++){
-        count -= daysInMonth(i, currentDate[1]);
+        count -= daysInMonth(i, currentDate[0]);
     }
     count += (inputDate[2] - currentDate[2]);
 
