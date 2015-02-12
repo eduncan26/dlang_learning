@@ -1,24 +1,19 @@
-import std.stdio, std.regex, std.string, std.conv, std.datetime, std.traits;
+import std.stdio, std.string, std.conv, std.datetime;
 
 void main()
 {
-    auto r = benchmark!(countWords)(100);
+    auto r = benchmark!(countMacbeth)(100);
     auto result = to!Duration(r[0] / 100);
-    write(result);
+    writeln(result);
 }
 
-void countWords()
+void countMacbeth() 
 {
     auto file = File("macbeth.txt", "r");
     int count;
 
     foreach(line; file.byLine()) {
-        foreach(word; split(strip(replaceAll(line, regex(r"[^a-zA-Z]"), " ")))){
-            if(to!string(word.toLower) == "macbeth") {
-                ++count;
-                break;
-            }
-        }
+        if(line.indexOf("macbeth", CaseSensitive.no) != -1) ++count;
     }
     writeln(count);
 }
