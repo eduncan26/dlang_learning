@@ -1,6 +1,6 @@
 import std.stdio, std.exception;
 /*
-    use: $ echo 1, 5, 7, 9, 10 | ./stats Min Max Average
+    use: $ echo 1 5 7 9 10 | ./stats Min Max Average
     output: 1 10 6.4
 */
 
